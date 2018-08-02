@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="427.0" prefWidth="672.0" style="-fx-background-color: #673AB7;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="43.0" layoutY="201.0" prefHeight="26.0" prefWidth="195.0" promptText="Palabra a Buscar" style="-fx-text-color-: #000000;" unFocusColor="#512da8" />
+      <Separator layoutX="260.0" layoutY="81.0" orientation="VERTICAL" prefHeight="293.0" prefWidth="1.0" />
+   </children>
+</AnchorPane>
