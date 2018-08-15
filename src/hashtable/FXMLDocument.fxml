@@ -1,14 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
 <?import com.jfoenix.controls.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="427.0" prefWidth="672.0" style="-fx-background-color: #673AB7;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="btnSelTxt" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="443.0" prefWidth="654.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hashtable.FXMLDocumentController">
    <children>
-      <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="43.0" layoutY="201.0" prefHeight="26.0" prefWidth="195.0" promptText="Palabra a Buscar" style="-fx-text-color-: #000000;" unFocusColor="#512da8" />
-      <Separator layoutX="260.0" layoutY="81.0" orientation="VERTICAL" prefHeight="293.0" prefWidth="1.0" />
+      <HBox alignment="TOP_RIGHT" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="9.0" prefWidth="654.0" style="-fx-background-color: #512DA8;">
+         <children>
+            <JFXButton fx:id="btnSal" alignment="CENTER" buttonType="RAISED" onMouseClicked="#close" ripplerFill="WHITE" style="-fx-background-color: #FFC107;" text="Salir" textFill="WHITE">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+         </padding>
+      </HBox>
+      <Pane layoutY="30.0" prefHeight="108.0" prefWidth="654.0" style="-fx-background-color: #673AB7;">
+         <children>
+            <Label alignment="TOP_LEFT" contentDisplay="CENTER" text="Diccionario de conceptos referentes a Software" textFill="WHITE">
+               <font>
+                  <Font name="Noto Sans" size="20.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Label>
+            <Label layoutX="11.0" layoutY="37.0" text="Estructuras de Datos Avanzadas" textFill="WHITE">
+               <font>
+                  <Font name="Noto Sans" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="11.0" layoutY="62.0" text="Tablas Hash" textFill="WHITE">
+               <font>
+                  <Font name="Noto Sans" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <JFXTextField fx:id="txtPal" focusColor="#ffc107" labelFloat="true" layoutX="36.0" layoutY="251.0" onKeyReleased="#searchWord" prefHeight="25.0" prefWidth="219.0" promptText="Palabra a buscar" visible="false" />
+      <Separator layoutX="324.0" layoutY="145.0" orientation="VERTICAL" prefHeight="286.0" prefWidth="6.0" />
+      <JFXListView fx:id="txtDefPal" layoutX="341.0" layoutY="145.0" prefHeight="286.0" prefWidth="302.0" style="-fx-border-radius: 10px;" styleClass="payload" stylesheets="@style.css" visible="false">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Glow />
+         </effect>
+      </JFXListView>
+      <JFXButton buttonType="RAISED" layoutX="36.0" layoutY="363.0" onMouseClicked="#init" prefHeight="25.0" prefWidth="219.0" ripplerFill="WHITE" style="-fx-background-color: #FFC107;" text="Seleccionar fichero TXT" textFill="WHITE" />
    </children>
 </AnchorPane>
